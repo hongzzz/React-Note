@@ -11,11 +11,13 @@ module.exports = {
         rules: [
             {
                 test: /\.jsx?$/,
-                enforce: 'pre',
-                use: [{
-                    loader: 'eslint-loader',
-                    options: {fix: true}
-                }],
+                enforce: "pre",
+                use: [
+                    {
+                        loader: "eslint-loader",
+                        options: { fix: true }
+                    }
+                ],
                 exclude: /node_modules/
             },
             {
@@ -29,17 +31,12 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                use: [
-                    {
-                        loader: "style-loader"
-                    },
-                    {
-                        loader: "css-loader"
-                    },
-                    {
-                        loader: "less-loader"
-                    }
-                ]
+                use: ["style-loader", "css-loader", "less-loader"]
+            },
+            {
+                test: /\.(svg|png|gif|jpg|ico)$/,
+                exclude: /node_modules/,
+                use: ["file-loader"]
             }
         ]
     },
@@ -47,22 +44,21 @@ module.exports = {
         contentBase: path.join(__dirname, "dist"),
         compress: true,
         host: "0.0.0.0",
-        port: process.env.PORT || 80,
-        watchOptions: {
-            poll: true
-        }
+        port: process.env.PORT || 80
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, "src/index.html"),
-            filename: "./index.html"
+            template: path.join(__dirname, "./index.html"),
+            filename: "index.html",
+            favicon: path.join(__dirname, "./src/common/img/favicon.ico"),
+            title: "React Note"
         })
     ],
     resolve: {
         extensions: [".js", ".jsx"],
         alias: {
             "@": path.resolve(__dirname, "src"),
-            Com: path.resolve(__dirname, "src/component")
+            Component: path.resolve(__dirname, "src/component")
         }
     }
 };

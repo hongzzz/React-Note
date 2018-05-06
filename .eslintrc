@@ -1,5 +1,8 @@
 {
     "parser": "babel-eslint",
+    "plugins": [
+        "react"
+    ],
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended"
@@ -9,8 +12,5 @@
         "es6": true,
         "node": true,
         "commonjs": true
-    },
-    "plugins": [
-        "react"
-    ]
+    }
 }
