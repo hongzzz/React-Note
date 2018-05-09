@@ -5,7 +5,6 @@ const defaultState = [
     'STORY'
 ];
 
-
 export default function (state = defaultState, action) {
     switch (action.type) {
         case ADD_NOTE:
