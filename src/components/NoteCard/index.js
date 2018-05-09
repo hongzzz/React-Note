@@ -5,13 +5,15 @@ import './index.less';
 
 class NoteCard extends Component {
     static propTypes = {
-        name: PropTypes.string
+        time: PropTypes.number,
+        color: PropTypes.string,
+        text: PropTypes.string,
     };
 
     render() {
         return (
-            <div className="note-card">
-                note { this.props.name }
+            <div className="note-card" style={ { background: this.props.color } }>
+                { this.props.text }
             </div>
         );
     }

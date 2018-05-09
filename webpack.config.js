@@ -58,7 +58,9 @@ module.exports = {
         extensions: [".js", ".jsx"],
         alias: {
             "@": path.resolve(__dirname, "src"),
-            Component: path.resolve(__dirname, "src/component")
+            Components: path.resolve(__dirname, "src/components"),
+            Reducers: path.resolve(__dirname, "src/reducers"),
+            Actions: path.resolve(__dirname, "src/actions")
         }
     }
 };
