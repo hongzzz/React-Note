@@ -17,10 +17,13 @@ class NoteList extends Component {
 
         return (
             <div className="note-list">
-                <button className="add" onClick={ () => this.props.addNote('New Note') }>+</button>
-                { notes.map((item, idx) =>
-                    <NoteCard time={ 1 } color={ '#92FF45' } text={ item } key={ idx }/>)
-                }
+                <button className="add-button" onClick={ () => this.props.addNote('New Note') }>+</button>
+                <div className="notes-wrapper">
+                    { notes.map((item, idx) =>
+                        <NoteCard time={ 1 } color={ '#fafafa' } text={ item } key={ idx }/>)
+                    }
+                </div>
+
             </div>
         );
     }

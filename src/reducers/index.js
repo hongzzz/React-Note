@@ -4,7 +4,7 @@ import VersionReducer from './versionReducer';
 
 const rootReducer = combineReducers({
     notes: NotesReducer,
-    version: VersionReducer
+    version: VersionReducer,
 });
 
 export default rootReducer;

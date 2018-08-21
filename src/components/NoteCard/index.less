@@ -1,13 +1,51 @@
 .note-card {
+  position: relative;
   box-sizing: border-box;
-  width: 25%;
-  min-height: 100px;
-  padding: 10px;
-  margin: 30px 10px 0 10px;
+  width: 18%;
+  height: 160px;
+  margin-bottom: 20px;
+  padding: 20px;
   line-height: 25px;
+  border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px, rgba(0, 0, 0, 0.24) 0 1px 2px;
   transition: all 0.2s ease-in-out;
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.24) 0 6px 6px;
+  }
+  &::after {
+    content: '';
+    flex: auto;
+  }
+  .note-content {
+    overflow: scroll;
+  }
+  .note-info {
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px;
+    font-size: 12px;
+    border-top: 1px dotted #ccc;
+  }
+}
+@media (max-width: 1400px) {
+  .note-card {
+    width: 23%;
+  }
+}
+
+@media (max-width: 900px) {
+  .note-card {
+    width: 48%;
+  }
+}
+
+@media (max-width: 500px) {
+  .note-card {
+    width: 100%;
   }
 }

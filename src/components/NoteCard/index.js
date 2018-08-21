@@ -13,7 +13,13 @@ class NoteCard extends Component {
     render() {
         return (
             <div className="note-card" style={ { background: this.props.color } }>
-                { this.props.text }
+                <div className="note-content">
+                    { this.props.text }
+                </div>
+                <div className="note-info">
+                    <span className="time">{new Date().toLocaleDateString()}</span>
+                    <span className="edit">编辑</span>
+                </div>
             </div>
         );
     }

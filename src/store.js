@@ -9,6 +9,7 @@ const loadState = () => {
     const strState = localStorage.getItem('state');
     if (strState) {
         const state = JSON.parse(strState);
+        // 版本更新后不保留state
         if (state.version !== __VERSION__) {
             return undefined;
         } else {

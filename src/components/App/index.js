@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
-import NoteList from "Components/NoteList/index";
-import Header from 'Components/Header/index';
+import NoteList from 'Components/NoteList';
+import Header from 'Components/Header';
+import Editor from 'Components/Editor';
 
 import './index.less';
 
@@ -11,6 +12,7 @@ class App extends Component {
             <div className="app">
                 <Header/>
                 <NoteList/>
+                <Editor/>
             </div>
         );
     }
